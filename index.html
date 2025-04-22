@@ -185,11 +185,11 @@
               </div>
           
               <div class="contact-right">
-                <form class="contact-form" action="#" method="POST" id="contactForm">
-                  <input type="text" name="name" placeholder="Votre nom" required>
-                  <input type="email" name="email" placeholder="Votre email" required>
+                <form class="contact-form" action="#" method="POST" id="contactForm ">
+                  <input type="text" name="name" id="name" placeholder="Votre nom" required>
+                  <input type="email" name="email" id="email" placeholder="Votre email" required>
                   <textarea name="message" rows="5" placeholder="Votre message" required></textarea>
-                  <button type="submit"><i class="fas fa-paper-plane"></i> Envoyer</button>
+                  <button type="submit" onclick="sendToWhatsApp()"><i class="fas fa-paper-plane"></i> Envoyer</button>
                 </form>
               </div>
             </div>
@@ -203,5 +203,7 @@
       });
     </script>
     <script src="script.js"></script>
+ 
+
 </body>
 </html>

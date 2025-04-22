@@ -119,3 +119,31 @@ if (contactForm) {
 document.addEventListener('DOMContentLoaded', () => {
     animateOnScroll();
 });
+
+
+function sendToWhatsApp() {
+    var name = document.getElementById("name").value.trim();
+    var email = document.getElementById("email").value.trim();
+    // var formation = document.getElementById("formation").value;
+    // var horaire = document.getElementById("horaire").value;
+
+    var phone = "242067571100"; // Numéro sans le "+"
+
+
+    var message =
+      "Bonjour, je m'appelle " + name +
+      " (" + email + ") et je souhaite m'inscrire à la formation anglaisecettee année " ;
+
+    var whatsappURL = "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
+
+    // Rediriger vers WhatsApp
+    window.open(whatsappURL, "_blank");
+  }
+
+
+  
+
+
+
+
+  
