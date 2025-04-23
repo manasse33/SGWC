@@ -88,33 +88,33 @@ const animateOnScroll = () => {
 window.addEventListener('scroll', animateOnScroll);
 
 
-const contactForm = document.getElementById('contactForm');
-if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
+// const contactForm = document.getElementById('contactForm');
+// if (contactForm) {
+//     contactForm.addEventListener('submit', function(e) {
+//         e.preventDefault();
         
     
-        const submitButton = this.querySelector('button[type="submit"]');
-        submitButton.innerHTML = 'Envoi en cours...';
-        submitButton.disabled = true;
+//         const submitButton = this.querySelector('button[type="submit"]');
+//         submitButton.innerHTML = 'Envoi en cours...';
+//         submitButton.disabled = true;
         
         
-        setTimeout(() => {
-            submitButton.innerHTML = 'Message envoyé !';
-            submitButton.style.backgroundColor = '#27ae60';
+//         setTimeout(() => {
+//             submitButton.innerHTML = 'Message envoyé !';
+//             submitButton.style.backgroundColor = '#27ae60';
             
             
-            this.reset();
+//             this.reset();
             
             
-            setTimeout(() => {
-                submitButton.innerHTML = 'Envoyer';
-                submitButton.disabled = false;
-                submitButton.style.backgroundColor = '';
-            }, 3000);
-        }, 1500);
-    });
-}
+//             setTimeout(() => {
+//                 submitButton.innerHTML = 'Envoyer';
+//                 submitButton.disabled = false;
+//                 submitButton.style.backgroundColor = '';
+//             }, 3000);
+//         }, 1500);
+//     });
+// }
 
 document.addEventListener('DOMContentLoaded', () => {
     animateOnScroll();
@@ -141,9 +141,117 @@ function sendToWhatsApp() {
   }
 
 
+  function toggleForm(e) {
+    if (e) e.preventDefault(); // évite de suivre le lien ou de soumettre le formulaire
+  
+    const form = document.getElementById('slideUpForm');
+    form.classList.toggle('show');
+  }
+  
+  function toggleForm1(e) {
+    if (e) e.preventDefault(); // évite de suivre le lien ou de soumettre le formulaire
+  
+    const form = document.getElementById('slideUpForm1');
+    form.classList.toggle('show');
+  }
+
+  function toggleForm2(e) {
+    if (e) e.preventDefault(); // évite de suivre le lien ou de soumettre le formulaire
+  
+    const form = document.getElementById('slideUpForm2');
+    form.classList.toggle('show');
+  }
+  
   
 
+ 
+  document.getElementById("contactForm").addEventListener("submit", function (e) {
+    e.preventDefault();
 
+    const scriptURL = "https://script.google.com/macros/s/AKfycbwK5Lx2abo82dRHu-NTROBNyvCQ34KfLbJDb5CSpx32CpB8-0EQXvRNWH1kC0arvbvzKw/exec"; // Remplace avec ton URL
+    const form = e.target;
+
+    const formData = new FormData(form);
+
+    fetch(scriptURL, {
+      method: "POST",
+      body: formData,
+    })
+    .then(res => res.json())
+    .then(data => {
+      if (data.success) {
+        showConfirmation(); // ta fonction d'animation
+      } else {
+        alert(data.message); // Affiche "Déjà inscrit"
+      }
+    })
+    
+      
+      .catch(error => {
+        alert("❌ Une erreur s’est produite.");
+        console.error("Erreur:", error);
+      });
+  });
+
+  
+  document.getElementById("contactForm1").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const scriptURL = "https://script.google.com/macros/s/AKfycbwK5Lx2abo82dRHu-NTROBNyvCQ34KfLbJDb5CSpx32CpB8-0EQXvRNWH1kC0arvbvzKw/exec"; // Remplace avec ton URL
+    const form = e.target;
+
+    const formData = new FormData(form);
+
+    fetch(scriptURL, {
+      method: "POST",
+      body: formData,
+    })
+    .then(res => res.json())
+    .then(data => {
+      if (data.success) {
+        showConfirmation(); // ta fonction d'animation
+      } else {
+        alert(data.message); // Affiche "Déjà inscrit"
+      }
+    })
+    
+      
+      .catch(error => {
+        alert("❌ Une erreur s’est produite.");
+        console.error("Erreur:", error);
+      });
+  });
+
+  
+  document.getElementById("contactForm2").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const scriptURL = "https://script.google.com/macros/s/AKfycbwK5Lx2abo82dRHu-NTROBNyvCQ34KfLbJDb5CSpx32CpB8-0EQXvRNWH1kC0arvbvzKw/exec"; // Remplace avec ton URL
+    const form = e.target;
+
+    const formData = new FormData(form);
+
+    fetch(scriptURL, {
+      method: "POST",
+      body: formData,
+    })
+    .then(res => res.json())
+    .then(data => {
+      if (data.success) {
+        showConfirmation(); // ta fonction d'animation
+      } else {
+        alert(data.message); // Affiche "Déjà inscrit"
+      }
+    })
+    
+      
+      .catch(error => {
+        alert("❌ Une erreur s’est produite.");
+        console.error("Erreur:", error);
+      });
+  });
+
+  
 
 
   

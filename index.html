@@ -104,9 +104,26 @@
                   <li>Support PDF</li>
                   <li>Suivi de progression</li>
                 </ul>
-                <a href="#contact" class="btn-pricing"><i class="fas fa-check-circle"></i> Je m'inscris</a>
+                <a href="#" class="btn-pricing" onclick="toggleForm(event)"><i class="fas fa-check-circle"></i> Je m'inscris</a>
+                            
+                <div class="form-slide-up" id="slideUpForm">
+                  <div class="form-content">
+                    <span class="close-btn" onclick="toggleForm(event)"><i class="fas fa-close"></i></span>
+                    <form class="contact-form" id="contactForm">
+                      <input type="text" name="Name" id="name" placeholder="Votre nom" required>
+                      <input type="text" name="firstName" id="firstName" placeholder="Votre Prenom" required>
+                      <input type="tel" name="tel" id="tel" placeholder="Votre Numero" required>
+                      <button type="submit" ><i class="fas fa-paper-plane"></i> Envoyer</button>
+                    </form>
+                    <div class="confirmation-message" id="confirmationMessage">
+                      <i class="fas fa-check-circle"></i> Merci ! Votre inscription a été envoyée avec succès.
+                    </div>
+                    
+                  </div>
+                </div>
+             
               </div>
-          
+       
               <div class="pricing-card featured" data-aos="zoom-in" data-aos-delay="100">
                 <h3><i class="fas fa-gem"></i> Formule Standard</h3>
                 <p class="price">15 000 FCFA / mois</p>
@@ -115,7 +132,22 @@
                   <li>Support + accès vidéo</li>
                   <li>Tests réguliers</li>
                 </ul>
-                <a href="#contact" class="btn-pricing"><i class="fas fa-check-circle"></i> Je m'inscris</a>
+                <a href="#" class="btn-pricing" onclick="toggleForm1(event)"><i class="fas fa-check-circle"></i> Je m'inscris</a>
+                <div class="form-slide-up" id="slideUpForm1">
+                  <div class="form-content">
+                    <span class="close-btn" onclick="toggleForm(event)"><i class="fas fa-close"></i></span>
+                    <form class="contact-form" id="contactForm1">
+                      <input type="text" name="Name" id="name" placeholder="Votre nom" required>
+                      <input type="text" name="firstName" id="firstName" placeholder="Votre Prenom" required>
+                      <input type="tel" name="tel" id="tel" placeholder="Votre Numero" required>
+                      <button type="submit" ><i class="fas fa-paper-plane"></i> Envoyer</button>
+                    </form>
+                    <div class="confirmation-message" id="confirmationMessage1">
+                      <i class="fas fa-check-circle"></i> Merci ! Votre inscription a été envoyée avec succès.
+                    </div>
+                    
+                  </div>
+                </div>
               </div>
 
       
@@ -127,7 +159,23 @@
                   <li>Support + vidéos + bonus</li>
                   <li>Coaching personnalisé</li>
                 </ul>
-                <a href="#contact" class="btn-pricing"><i class="fas fa-check-circle"></i> Je m'inscris</a>
+                <a href="#" class="btn-pricing" onclick="toggleForm2(event)"><i class="fas fa-check-circle"></i> Je m'inscris</a>
+                            
+                <div class="form-slide-up" id="slideUpForm2">
+                  <div class="form-content">
+                    <span class="close-btn" onclick="toggleForm(event)"><i class="fas fa-close"></i></span>
+                    <form class="contact-form" id="contactForm2">
+                      <input type="text" name="Name" id="name" placeholder="Votre nom" required>
+                      <input type="text" name="firstName" id="firstName" placeholder="Votre Prenom" required>
+                      <input type="tel" name="tel" id="tel" placeholder="Votre Numero" required>
+                      <button type="submit" ><i class="fas fa-paper-plane"></i> Envoyer</button>
+                    </form>
+                    <div class="confirmation-message" id="confirmationMessage2">
+                      <i class="fas fa-check-circle"></i> Merci ! Votre inscription a été envoyée avec succès.
+                    </div>
+                    
+                  </div>
+                </div>
               </div>
             </div>
           </section>
@@ -178,7 +226,7 @@
                   <li><i class="fas fa-phone-alt"></i> +242 06 757 11 00</li>
                   <li><i class="fas fa-envelope"></i> contact@sgwc.com</li>
                   <li><i class="fas fa-map-marker-alt"></i> Brazzaville, Mpila</li>
-                  <li><i class="fab fa-whatsapp"></i> WhatsApp: +242 06 757 11 00</li>
+                  <li><i class="fab fa-whatsapp" onclick="sendToWhatsApp()"></i> WhatsApp: +242 06 757 11 00</li>
                   <li><i class="fab fa-facebook"></i> Facebook: SGWC Official</li>
                   <li><i class="fab fa-instagram"></i> Instagram: @sgwc_official</li>
                 </ul>
@@ -189,7 +237,7 @@
                   <input type="text" name="name" id="name" placeholder="Votre nom" required>
                   <input type="email" name="email" id="email" placeholder="Votre email" required>
                   <textarea name="message" rows="5" placeholder="Votre message" required></textarea>
-                  <button type="submit" onclick="sendToWhatsApp()"><i class="fas fa-paper-plane"></i> Envoyer</button>
+                  <button type="submit" ><i class="fas fa-paper-plane"></i> Envoyer</button>
                 </form>
               </div>
             </div>

@@ -710,6 +710,88 @@ nav ul li a.active::after {
   width: 300px;
   height: 300px;
 }
+.form-slide-up {
+  position: fixed;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  background: rgba(44, 62, 80, 0.6);
+  /* background: #fff; */
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.2);
+  transition: bottom 0.5s ease-in-out;
+  z-index: 999;
+  border-radius: 20px 20px 0 0;
+  padding: 30px 20px;
+}
+
+.form-slide-up.show {
+  bottom: 0;
+}
+
+.form-content {
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.form-content .close-btn {
+  /* background-color: red; */
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 2rem;
+  color: #333;
+  cursor: pointer;
+  z-index: 100;
+}
+.form-content .contact-form input,
+.form-content .contact-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.form-content .contact-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #2ecc71;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.confirmation-message {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100%);
+  background: #4CAF50;
+  color: white;
+  padding: 18px 30px;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  opacity: 0;
+  z-index: 9999;
+  transition: all 0.5s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.confirmation-message.active {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+
 
 .animate-on-scroll {
   opacity: 0;
