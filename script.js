@@ -177,13 +177,12 @@ function sendToWhatsApp() {
       method: "POST",
       body: formData,
     })
-    .then(res => res.json())
-    .then(data => {
-      if (data.success) {
-        showConfirmation(); // ta fonction d'animation
-      } else {
-        alert(data.message); // Affiche "Déjà inscrit"
-      }
+    .then(result=>{
+      const confirmation= document.getElementById('confirmationMessage');
+      confirmation.classList.add("active"); setTimeout(()=>{
+        confirmation.classList.remove("active")
+      },3000);
+      form.reset();
     })
     
       
@@ -206,13 +205,12 @@ function sendToWhatsApp() {
       method: "POST",
       body: formData,
     })
-    .then(res => res.json())
-    .then(data => {
-      if (data.success) {
-        showConfirmation(); // ta fonction d'animation
-      } else {
-        alert(data.message); // Affiche "Déjà inscrit"
-      }
+    .then(result=>{
+      const confirmation= document.getElementById('confirmationMessage1');
+      confirmation.classList.add("active"); setTimeout(()=>{
+        confirmation.classList.remove("active")
+      },3000);
+      form.reset();
     })
     
       
@@ -235,13 +233,12 @@ function sendToWhatsApp() {
       method: "POST",
       body: formData,
     })
-    .then(res => res.json())
-    .then(data => {
-      if (data.success) {
-        showConfirmation(); // ta fonction d'animation
-      } else {
-        alert(data.message); // Affiche "Déjà inscrit"
-      }
+    .then(result=>{
+      const confirmation= document.getElementById('confirmationMessage2');
+      confirmation.classList.add("active"); setTimeout(()=>{
+        confirmation.classList.remove("active")
+      },3000);
+      form.reset();
     })
     
       
