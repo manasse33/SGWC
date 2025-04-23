@@ -1027,7 +1027,7 @@ section h2 i {
     width: 70%;
     background: #2c3e50;
     transition: 0.3s ease-in-out;
-    z-index: 1100;
+    z-index: 110000;
   }
 
   .burger {
