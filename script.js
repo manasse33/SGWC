@@ -172,12 +172,25 @@ function sendToWhatsApp() {
     const form = e.target;
 
     const formData = new FormData(form);
+    const loader = document.getElementById('loader');
+    // const successMsg = document.getElementById('success-message');
+    const submitBtn = document.getElementById('button');
+  
+    // 1. Afficher le loader
+    loader.style.display = 'block';
+    // successMsg.style.display = 'none';
+    submitBtn.disabled = false;
+  
 
     fetch(scriptURL, {
       method: "POST",
       body: formData,
     })
     .then(result=>{
+      
+      loader.style.display = 'none';
+      submitBtn.disabled = false;
+
       const confirmation= document.getElementById('confirmationMessage');
       confirmation.classList.add("active"); setTimeout(()=>{
         confirmation.classList.remove("active")
@@ -200,12 +213,22 @@ function sendToWhatsApp() {
     const form = e.target;
 
     const formData = new FormData(form);
+    const loader = document.getElementById('loader');
+    // const successMsg = document.getElementById('success-message');
+    const submitBtn = this.querySelector('button');
+  
+    // 1. Afficher le loader
+    loader.style.display = 'block';
+    // successMsg.style.display = 'none';
+    submitBtn.disabled = false;
 
     fetch(scriptURL, {
       method: "POST",
       body: formData,
     })
     .then(result=>{
+      loader.style.display = 'none';
+      submitBtn.disabled = false;
       const confirmation= document.getElementById('confirmationMessage1');
       confirmation.classList.add("active"); setTimeout(()=>{
         confirmation.classList.remove("active")
@@ -228,12 +251,22 @@ function sendToWhatsApp() {
     const form = e.target;
 
     const formData = new FormData(form);
+    const loader = document.getElementById('loader');
+    // const successMsg = document.getElementById('success-message');
+    const submitBtn = this.querySelector('button');
+  
+    // 1. Afficher le loader
+    loader.style.display = 'block';
+    // successMsg.style.display = 'none';
+    submitBtn.disabled = false;
 
     fetch(scriptURL, {
       method: "POST",
       body: formData,
     })
     .then(result=>{
+      loader.style.display = 'none';
+      submitBtn.disabled = false;
       const confirmation= document.getElementById('confirmationMessage2');
       confirmation.classList.add("active"); setTimeout(()=>{
         confirmation.classList.remove("active")
